@@ -1,39 +1,72 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.4;
+  color: #000;
+  background: #fff;
+  height: 100vh;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ==========================
+Sidebar navigation
+======================== */
+.navbar {
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .toggle {
+  position: fixed;
+  left: 30px;
+  top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.menu-nav {
+  list-style: none;
+  position: absolute;
+  background: #fff;
+  left: 30px;
+  top: 70px;
+  width: 0;
+  padding: 10px;
+  overflow: hidden;
+  max-width: 180px;
+  z-index: 9;
+  font-size: 18px;
+  box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
+  transform: translateX(-100px);
+  transition: transform ease-in-out 0.2s;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.menu-nav.show-menu {
+  width: 100%;
+  transform: translateX(0);
+}
+
+.menu-nav li,
+.menu-nav li span {
+  display: block;
+  padding: 0.8rem;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 8rem 20px 3rem;
+}
+
+.todos {
+  max-width: 580px;
+  margin: 0 auto;
 }
