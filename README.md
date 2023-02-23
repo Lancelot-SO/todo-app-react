@@ -86,8 +86,6 @@ Install this project with:
 ```sh
   cd my-project
   npm install -y
-  npm install react-icons
-  npm i -S prop-types
 
 ```
 
